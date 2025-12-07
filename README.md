@@ -56,6 +56,8 @@ update(): 更新笔记时，自动更新 MODIFIED_DATE，并负责保存笔记�
 
 下图展示了笔记编辑器界面，您可以看到标题输入框、分类选择下拉菜单。
 
+<img width="257" height="122" alt="image" src="https://github.com/user-attachments/assets/90a57f34-d0bd-453a-9764-28796a077208" />
+
 <img width="263" height="230" alt="image" src="https://github.com/user-attachments/assets/943d3d5e-5c9b-48ab-a853-f942e4b73c33" />
 
 <img width="263" height="235" alt="image" src="https://github.com/user-attachments/assets/1976e588-4bc9-4bfb-8cc5-57e844213aa8" />
@@ -90,6 +92,33 @@ update(): 更新笔记时，自动更新 MODIFIED_DATE，并负责保存笔记�
 下图展示了用户输入关键字后，列表只显示匹配笔记标题的结果状态。
 
 <img width="259" height="133" alt="image" src="https://github.com/user-attachments/assets/c439bde6-1c82-4b74-a889-3742c22e4252" />
+
+四、部分代码展示
+
+1.1. 列表数据显示绑定与自定义处理
+
+此代码展示了如何配置 SimpleCursorAdapter 以绑定数据库中的 CATEGORY 和 MODIFIED_DATE 字段，并设置自定义 ViewBinder 进行数据格式化。
+
+<img width="401" height="535" alt="image" src="https://github.com/user-attachments/assets/6e8783aa-2e38-4308-8e54-ad1f1a09dafb" />
+
+1.2. 自定义 ViewBinder 实现分类名称转换
+
+这个内部类负责将存储在数据库中的数字分类 ID 转换为可读的字符串名称，并将时间戳格式化为日期字符串。
+
+<img width="472" height="535" alt="image" src="https://github.com/user-attachments/assets/90d76cd0-3bd1-45ae-9868-d38b2973f228" />
+
+2.1. 分类 Spinner 初始化
+此代码段在 NoteEditor.java 的 onCreate 方法中初始化分类下拉菜单，并设置监听器以捕获用户的选择。
+
+<img width="562" height="455" alt="image" src="https://github.com/user-attachments/assets/ded69eab-aaf7-4712-a366-d3704cf274fd" />
+
+2.2. 保存笔记时更新分类字段
+
+此方法在 onPause 或点击保存菜单项时调用，负责将新的笔记内容和分类 ID 写入数据库。
+
+<img width="563" height="626" alt="image" src="https://github.com/user-attachments/assets/426b9455-76fb-4562-a197-bb9360cdbab9" />
+
+<img width="539" height="106" alt="image" src="https://github.com/user-attachments/assets/5ca79eec-0f05-4a7a-827c-d571f3df646a" />
 
 四、总结
 
