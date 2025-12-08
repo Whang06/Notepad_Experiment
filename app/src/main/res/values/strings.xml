@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NotePad</string>
+    <string name="live_folder_name">Notes</string> <string name="title_notes_list">Notes</string>
+    <string name="title_note">Note</string>
+    <string name="title_create">Create note</string>
+    <string name="title_edit">Edit note</string>
+    <string name="title_edit_title">Note Title</string> <string name="menu_add">Add note</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_revert">Revert changes</string>
+    <string name="menu_copy">Copy</string>
+    <string name="menu_paste">Paste</string>
+
+    <string name="menu_search">搜索笔记</string>
+
+    <string name="category_prompt">选择分类</string>
+    <string-array name="category_names">
+        <item>无</item>
+        <item>工作</item>
+        <item>个人</item>
+        <item>学习</item>
+    </string-array>
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="error_title">Error</string>
+    <string name="error_message">Error loading note</string>
+    <string name="nothing_to_save">There is nothing to save</string>
+
+    <string name="resolve_edit">Edit note</string>
+    <string name="resolve_title">Edit title</string>
+
+    <string name="note_default">(Untitled)</string>
+    <string name="title_default">(Untitled)</string>
+</resources>
